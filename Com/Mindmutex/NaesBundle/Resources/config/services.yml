@@ -1,0 +1,11 @@
+parameters:
+    draugiem.connector.class: Com\Mindmutex\NaesBundle\Draugiem\DraugiemApi
+
+services:
+    draugiem.connector:
+        class: %draugiem.connector.class%
+        arguments: [%draugiem_api_id%, %draugiem_api_key%]
+        
+    draugiem.security.authentication.listener:
+        class: Com\Mindmutex\NaesBundle\Draugiem\DraugiemListener
+        arguments: ["@security.context", "@security.authentication.manager", "@logger", "@draugiem.connector"]

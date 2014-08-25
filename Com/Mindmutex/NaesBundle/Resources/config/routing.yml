@@ -1,0 +1,10 @@
+home:
+    path:     /
+    defaults: { _controller: NaesBundle:Default:index }
+   
+dashboard:
+    path:     /dashboard
+    defaults: { _controller: NaesBundle:Dashboard:index }
+
+dashboard_logout:
+    path:   /dashboard/logout

@@ -1,0 +1,8 @@
+# Add this security.yml as import in app/config/config.yml
+#imports:
+#    - { resource: '@NaesBundle/Resources/config/parameters.yml' }
+    
+parameters:
+    locale: lv
+    draugiem_api_key: ...
+    draugiem_api_id: ...

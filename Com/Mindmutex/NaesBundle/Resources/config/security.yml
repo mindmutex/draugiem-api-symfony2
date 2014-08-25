@@ -1,0 +1,24 @@
+# Add this security.yml as import in app/config/config.yml
+# imports:
+#   - { resource: '@NaesBundle/Resources/config/security.yml' }  
+security:
+    providers:
+        in_memory:
+            memory: ~
+              
+    firewalls:
+        assets:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+            
+        dashboard:
+            pattern: ^/dashboard
+            draugiem: true
+            anonymous: ~
+            logout:              
+                path: dashboard_logout
+                target: /            
+            
+        default:
+            anonymous: ~
+            
